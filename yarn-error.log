@@ -1,0 +1,119 @@
+Arguments: 
+  C:\Users\ltc\scoop\apps\nodejs-lts\current\node.exe D:\yarn\bin\yarn.js add @taroify/core
+
+PATH: 
+  D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;D:\anaconda3\bin;D:\anaconda3\condabin;D:\node\node_global\node_modules;E:\bin;D:\java\jdk11\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;D:\微信小程序开发\开发工具\微信web开发者工具1\dll;C:\Program Files;x86)\NVIDIA Corporation\PhysX\Common;E:\mysql-8.0.28-winx64\bin;C:\Program Files\Git\cmd;D:\apache-maven-3.8.4\bin;D:\Tomycat\apache-tomcat-11.0.0-M1\lib;D:\Tomycat\apache-tomcat-11.0.0-M1\bin;D:\Tomycat\apache-tomcat-11.0.0-M1\lib\servlet-api.jar;D:\yarn\bin;D:\java\jdk11\jre\bin;D:\phpstudy_pro\Extensions\php\php8.0.2nts;C:\ProgramData\ComposerSetup\bin;C:\Users\ltc\scoop\apps\nvm\current;C:\Users\ltc\scoop\persist\nvm\nodejs\nodejs;D:\anaconda3\Scripts;D:\anaconda3\Library\bin;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;C:\Users\ltc\scoop\apps\nodejs-lts\current\bin;C:\Users\ltc\scoop\apps\nodejs-lts\current;C:\Users\ltc\scoop\apps\nodejs16\current;C:\Users\ltc\scoop\apps\nodejs16\current\bin;C:\Users\ltc\scoop\apps\nvm\current\nodejs\nodejs;C:\Users\ltc\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin;E:\mysql\bin;C:\Users\ltc\AppData\Local\Microsoft\WindowsApps;D:\jetbrain\DataGrip 2022.2.5\bin;D:\IntelliJ IDEA Community Edition 2022.2.1\bin;D:\jetbrain\CLion 2022.2.4\bin;node_global;C:\Users\ltc\AppData\Local\JetBrains\Toolbox\scripts;C:\WINDOWS\system32;C:\Users\ltc\AppData\Local\Yarn\bin;C:\Users\ltc\AppData\Roaming\Composer\vendor\bin;D:\vscode\Microsoft VS Code\bin;C:\Users\ltc\scoop\apps\nvm\current;C:\Users\ltc\scoop\persist\nvm\nodejs\nodejs;D:\node\node_global;C:\Users\ltc\AppData\Local\GitHubDesktop\bin;D:\codedir\HarmonyOS\DevEco\DevEco Studio\bin;D:\codedir\MinGW\bin;D:\codedir\web\taro\taro_shop\node_modules\.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.9.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: unable to get local issuer certificate
+      at TLSSocket.onConnectSecure (node:_tls_wrap:1659:34)
+      at TLSSocket.emit (node:events:514:28)
+      at TLSSocket._finishInit (node:_tls_wrap:1070:8)
+      at ssl.onhandshakedone (node:_tls_wrap:856:12)
+
+npm manifest: 
+  {
+    "name": "taro_shop",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "templateInfo": {
+      "name": "default",
+      "typescript": true,
+      "css": "Less",
+      "framework": "React"
+    },
+    "scripts": {
+      "build:weapp": "taro build --type weapp",
+      "build:swan": "taro build --type swan",
+      "build:alipay": "taro build --type alipay",
+      "build:tt": "taro build --type tt",
+      "build:h5": "taro build --type h5",
+      "build:rn": "taro build --type rn",
+      "build:qq": "taro build --type qq",
+      "build:jd": "taro build --type jd",
+      "build:quickapp": "taro build --type quickapp",
+      "build:harmony-hybrid": "taro build --type harmony-hybrid",
+      "dev:weapp": "npm run build:weapp -- --watch",
+      "dev:swan": "npm run build:swan -- --watch",
+      "dev:alipay": "npm run build:alipay -- --watch",
+      "dev:tt": "npm run build:tt -- --watch",
+      "dev:h5": "npm run build:h5 -- --watch",
+      "dev:rn": "npm run build:rn -- --watch",
+      "dev:qq": "npm run build:qq -- --watch",
+      "dev:jd": "npm run build:jd -- --watch",
+      "dev:quickapp": "npm run build:quickapp -- --watch",
+      "dev:harmony-hybrid": "npm run build:harmony-hybrid -- --watch",
+      "test": "jest"
+    },
+    "browserslist": [
+      "last 3 versions",
+      "Android >= 4.1",
+      "ios >= 8"
+    ],
+    "author": "",
+    "dependencies": {
+      "@babel/runtime": "^7.21.5",
+      "@tarojs/components": "3.6.27",
+      "@tarojs/helper": "3.6.27",
+      "@tarojs/plugin-platform-weapp": "3.6.27",
+      "@tarojs/plugin-platform-alipay": "3.6.27",
+      "@tarojs/plugin-platform-tt": "3.6.27",
+      "@tarojs/plugin-platform-swan": "3.6.27",
+      "@tarojs/plugin-platform-jd": "3.6.27",
+      "@tarojs/plugin-platform-qq": "3.6.27",
+      "@tarojs/plugin-platform-h5": "3.6.27",
+      "@tarojs/plugin-platform-harmony-hybrid": "3.6.27",
+      "@tarojs/runtime": "3.6.27",
+      "@tarojs/shared": "3.6.27",
+      "@tarojs/taro": "3.6.27",
+      "@tarojs/plugin-framework-react": "3.6.27",
+      "@tarojs/react": "3.6.27",
+      "react-dom": "^18.0.0",
+      "react": "^18.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.8.0",
+      "@tarojs/cli": "3.6.27",
+      "@types/webpack-env": "^1.13.6",
+      "@tarojs/test-utils-react": "^0.1.1",
+      "@types/react": "^18.0.0",
+      "webpack": "5.78.0",
+      "@tarojs/taro-loader": "3.6.27",
+      "@tarojs/webpack5-runner": "3.6.27",
+      "babel-preset-taro": "3.6.27",
+      "eslint-config-taro": "3.6.27",
+      "eslint": "^8.12.0",
+      "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+      "react-refresh": "^0.11.0",
+      "eslint-plugin-react": "^7.8.2",
+      "eslint-plugin-import": "^2.12.0",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "stylelint": "^14.4.0",
+      "@typescript-eslint/parser": "^6.2.0",
+      "@typescript-eslint/eslint-plugin": "^6.2.0",
+      "typescript": "^5.1.0",
+      "tsconfig-paths-webpack-plugin": "^4.1.0",
+      "postcss": "^8.4.18",
+      "ts-node": "^10.9.1",
+      "@types/node": "^18.15.11",
+      "@types/jest": "^29.3.1",
+      "jest": "^29.3.1",
+      "jest-environment-jsdom": "^29.5.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
