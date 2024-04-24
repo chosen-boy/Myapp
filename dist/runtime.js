@@ -14,13 +14,16 @@
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -192,21 +195,27 @@
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	!function() {
+/******/ 		__webpack_require__.nmd = function(module) {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/remotes loading */
 /******/ 	!function() {
 /******/ 		var chunkMapping = {
 /******/ 			"app": [
 /******/ 				"webpack/container/remote/@tarojs/plugin-platform-weapp/dist/runtime",
-/******/ 				"webpack/container/remote/@tarojs/plugin-framework-react/dist/runtime",
-/******/ 				"webpack/container/remote/@tarojs/taro",
-/******/ 				"webpack/container/remote/react-dom"
-/******/ 			],
-/******/ 			"pages/index/index": [
-/******/ 				"webpack/container/remote/@taroify/core"
+/******/ 				"webpack/container/remote/@tarojs/plugin-framework-react/dist/runtime"
 /******/ 			],
 /******/ 			"common": [
 /******/ 				"webpack/container/remote/@tarojs/runtime",
+/******/ 				"webpack/container/remote/@tarojs/taro",
 /******/ 				"webpack/container/remote/react",
+/******/ 				"webpack/container/remote/react-dom",
 /******/ 				"webpack/container/remote/react/jsx-runtime"
 /******/ 			]
 /******/ 		};
@@ -221,29 +230,24 @@
 /******/ 				"./@tarojs/plugin-framework-react/dist/runtime",
 /******/ 				null
 /******/ 			],
-/******/ 			"webpack/container/remote/@tarojs/taro": [
-/******/ 				"default",
-/******/ 				"./@tarojs/taro",
-/******/ 				null
-/******/ 			],
-/******/ 			"webpack/container/remote/react-dom": [
-/******/ 				"default",
-/******/ 				"./react-dom",
-/******/ 				null
-/******/ 			],
-/******/ 			"webpack/container/remote/@taroify/core": [
-/******/ 				"default",
-/******/ 				"./@taroify/core",
-/******/ 				null
-/******/ 			],
 /******/ 			"webpack/container/remote/@tarojs/runtime": [
 /******/ 				"default",
 /******/ 				"./@tarojs/runtime",
 /******/ 				null
 /******/ 			],
+/******/ 			"webpack/container/remote/@tarojs/taro": [
+/******/ 				"default",
+/******/ 				"./@tarojs/taro",
+/******/ 				null
+/******/ 			],
 /******/ 			"webpack/container/remote/react": [
 /******/ 				"default",
 /******/ 				"./react",
+/******/ 				null
+/******/ 			],
+/******/ 			"webpack/container/remote/react-dom": [
+/******/ 				"default",
+/******/ 				"./react-dom",
 /******/ 				null
 /******/ 			],
 /******/ 			"webpack/container/remote/react/jsx-runtime": [

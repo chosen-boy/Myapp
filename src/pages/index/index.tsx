@@ -1,15 +1,12 @@
-import { View } from '@tarojs/components';
-import { useState } from 'react';
-import {Toast,Search,Swiper,Image } from '@taroify/core'
-import './index.less'
-import  goods01 from '../../assets/images/goods01.jpg'
-import  goods02 from '../../assets/images/goods02.jpg'
-import  goods03 from '../../assets/images/goods03.jpg'
-import  goods04 from '../../assets/images/goods04.jpg'
+import { View } from "@tarojs/components";
+import { useState } from "react";
+import { Image, Search, Swiper, Toast } from "@taroify/core";
+import "./index.less";
+import imageitem from "../../model/swiper";
 
 function SearchWithEvents() {
-  const [value, setValue] = useState('')
-  const [open, setOpen] = useState(false)
+  const [value, setValue] = useState("");
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -24,31 +21,36 @@ function SearchWithEvents() {
         onCancel={() => setOpen(true)}
       />
     </>
-  )
+  );
 }
+
 function ImageSwiper() {
+  const listItems = imageitem.map((item) => (
+    <Swiper.Item>
+      <Image className='image' src={item.src} key={item.id} />
+    </Swiper.Item>
+  ));
 
   return (
-    <Swiper className='basic-swiper' autoplay={4000}>
+    <Swiper className='basic-swiper' lazyRender autoplay={4000}>
       <Swiper.Indicator />
-      <Swiper.Item><Image className='image'  src={goods01} /></Swiper.Item>
-      <Swiper.Item><Image className='image'  src={goods02} /></Swiper.Item>
-      <Swiper.Item><Image className='image'  src={goods03} /></Swiper.Item>
-      <Swiper.Item><Image className='image'  src={goods04} /></Swiper.Item>
+      {listItems}
     </Swiper>
-  )
+  );
 }
+
 export default function Index() {
-
-
   return (
     <View className='page-body'>
       <View className='page-section'>
-        <View className='top_input'> <SearchWithEvents ></SearchWithEvents></View>
-        <View className='swiper'><ImageSwiper></ImageSwiper></View>
-
+        <View className='top_input'>
+          {" "}
+          <SearchWithEvents></SearchWithEvents>
+        </View>
+        <View className='swiper'>
+          <ImageSwiper></ImageSwiper>
+        </View>
       </View>
-
     </View>
   );
 }

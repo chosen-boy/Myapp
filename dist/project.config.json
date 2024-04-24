@@ -1,7 +1,7 @@
 {
-  "projectname": "taro_store",
+  "projectname": "taro_shop",
   "description": "",
-  "appid": "wx6c29021161b902e4",
+  "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -35,10 +35,10 @@
     "packNpmRelationList": [],
     "minifyWXSS": true,
     "disableUseStrict": false,
-    "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "ignoreUploadUnusedFiles": true
+    "ignoreUploadUnusedFiles": true,
+    "minifyWXML": true
   },
   "compileType": "miniprogram",
   "condition": {}
