@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Image, Search, Swiper, Toast } from "@taroify/core";
 import "./index.less";
 import imageitem from "../../model/swiper";
+import Tbs from "../../compoent/tbs";
 
 function SearchWithEvents() {
   const [value, setValue] = useState("");
@@ -47,8 +48,12 @@ export default function Index() {
           {" "}
           <SearchWithEvents></SearchWithEvents>
         </View>
+
         <View className='swiper'>
           <ImageSwiper></ImageSwiper>
+        </View>
+        <View className='Tbs'>
+          <Tbs></Tbs>
         </View>
       </View>
     </View>
