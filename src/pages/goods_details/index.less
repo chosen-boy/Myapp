@@ -1,0 +1,280 @@
+
+page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #eeeeee;
+
+}
+
+.page-body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  View {
+    background: white
+  }
+}
+
+.img_swiper {
+
+  width: 100%;
+  height: 500px;
+
+}
+
+.price_box {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .price {
+    height: 120px;
+
+
+    .price_left {
+      width: 40%;
+      height: 100%;
+      float: left;
+
+      .now_p {
+        color: red;
+        font-size: 40px;
+        line-height: 100px;
+      }
+
+      .pre_p {
+        text-decoration: line-through;
+        font-size: 30px;
+        color: #ccc;
+        line-height: 100px;
+      }
+    }
+
+    .price_right {
+      width: 200px;
+      height: 100%;
+      right: 0;
+      float: right;
+
+      .yishou {
+        width: 100%;
+        height: 120px;
+        font-size: 30px;
+        color: #ccc;
+        text-align: right;
+        line-height: 100px;
+      }
+    }
+  }
+
+  .redeem {
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .tag_left {
+      width: 50%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+
+    }
+
+    .tag_right {
+      width: 25%;
+      height: 100%;
+      background: #cccccc;
+
+      .taroify-cell {
+        line-height: 40px;
+        height: 70px;
+      }
+
+      .taroify-cell__value--alone {
+        color: red;
+        text-align: right;
+      }
+
+      .taroify-cell__right-icon {
+        color: red;
+      }
+
+    }
+  }
+
+  .good_title {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .title {
+      width: 80%;
+      height: 100%;
+      background: aqua;
+
+      .taroify-text-ellipsis {
+        width: 100%;
+        height: 100%;
+        line-height: 70px;
+        text-align: left;
+        padding-left: 30px;
+      }
+    }
+
+    .share {
+      width: 10%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+
+      .btn-icon {
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        color: #ccc;
+      }
+
+      .btn-text {
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #ccc;
+      }
+
+
+    }
+  }
+}
+
+.size_select {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+
+  .popup {
+    width: 100%;
+    height: 100%;
+
+    .poptext, .poptext Cell {
+      width: 100%;
+      height: 100%;
+    }
+
+    .taroify-cell {
+      width: 100%;
+      height: 50px;
+      padding-bottom: 20px;
+
+      .taroify-cell__right-icon {
+        margin-top: -15px;
+      }
+
+    }
+
+
+  }
+}
+
+.comments {
+  margin-top: 20px;
+  width: 100%;
+  height: 300px;
+
+}
+
+.goods_details {
+  margin-top: 20px;
+  width: 100%;
+  height: 800px;
+
+}
+
+.custom-indicator {
+  position: absolute;
+  right: 5px * 2;
+  bottom: 5px * 2;
+  padding: 2px * 2 5px * 2;
+  font-size: 12px * 2;
+  color: #000;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.swiper_item {
+  height: 500px;
+}
+
+.image {
+  width: 100%;
+  height: 500px;
+}
+
+.bottom {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+
+  .actionbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+  }
+
+  .actionitem {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action_right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .action_right_item {
+    width: 40%;
+  }
+
+
+}
+
+.action-bar-with-custom-icon-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

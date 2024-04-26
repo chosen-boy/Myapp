@@ -2,14 +2,19 @@
 import { Grid, Image, Tabs, Tag } from "@taroify/core";
 import { Text, View } from "@tarojs/components";
 import { CartOutlined } from "@taroify/icons";
+import Taro from "@tarojs/taro";
 import "./index.less";
+
+function navto() {
+  Taro.navigateTo({ url: "/pages/goods_details/index" });
+}
 
 export default function Index() {
   return (
     <Tabs animated swipeable>
       <Tabs.TabPane title='精选推荐'>
         <Grid className='grid' columns={2}>
-          <Grid.Item className='grid-item'>
+          <Grid.Item className='grid-item' onClick={navto}>
             <View className='imgwarp'>
               <Image
                 className='grid-image'

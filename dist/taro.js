@@ -8,6 +8,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Button": function() { return /* binding */ Button; },
 /* harmony export */   "Form": function() { return /* binding */ Form; },
 /* harmony export */   "Image": function() { return /* binding */ Image; },
 /* harmony export */   "Input": function() { return /* binding */ Input; },
@@ -17,7 +18,7 @@
 /* harmony export */   "Textarea": function() { return /* binding */ Textarea; },
 /* harmony export */   "View": function() { return /* binding */ View; }
 /* harmony export */ });
-/* unused harmony exports Ad, AdCustom, Audio, Block, Button, Camera, Canvas, ChannelLive, ChannelVideo, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, Editor, FunctionalPageNavigator, GridView, Icon, KeyboardAccessory, Label, ListView, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ShareElement, Slider, Slot, Snapshot, StickyHeader, StickySection, Swiper, SwiperItem, Video, VoipRoom, WebView */
+/* unused harmony exports Ad, AdCustom, Audio, Block, Camera, Canvas, ChannelLive, ChannelVideo, Checkbox, CheckboxGroup, CoverImage, CoverView, CustomWrapper, Editor, FunctionalPageNavigator, GridView, Icon, KeyboardAccessory, Label, ListView, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ShareElement, Slider, Slot, Snapshot, StickyHeader, StickySection, Swiper, SwiperItem, Video, VoipRoom, WebView */
 var View = 'view';
 var Icon = 'icon';
 var Progress = 'progress';
