@@ -3,9 +3,9 @@ import { Text, View } from "@tarojs/components";
 import { Cell, Image, Popup, Swiper, Tag, TextEllipsis } from "@taroify/core";
 
 import { useState } from "react";
+import ActionBar from "@taroify/commerce/action-bar";
 
-import { ActionBar } from "@taroify/commerce";
-import { CartOutlined, ChatOutlined, ShareOutlined } from "@taroify/icons";
+import { CartOutlined, HomeOutlined, ShareOutlined } from "@taroify/icons";
 
 import "./index.less";
 
@@ -34,6 +34,10 @@ function SwiperWithCustomIndicator() {
   );
 }
 
+function ValueSelect() {
+  return <View>111</View>;
+}
+
 function Popupstase() {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -55,7 +59,9 @@ function Popupstase() {
         onClose={() => setShowPopup(false)}
         className='popup-popup'
       >
-        <View className='popup-content'>11111</View>
+        <View className='popup-content'>
+          <ValueSelect></ValueSelect>
+        </View>
         <Popup.Backdrop
           onClick={() => setShowPopup(false)}
           open={showPopup}
@@ -67,23 +73,31 @@ function Popupstase() {
   );
 }
 
-function ActionBarWithCustomIconButton() {
+function BasicActionBar() {
   return (
-    <ActionBar className='actionbar'>
+    <ActionBar className='.actionbar'>
       <ActionBar.IconButton className='actionitem'>
-        <ChatOutlined color='#ee0a24' />
-        <Text>客服</Text>
+        <HomeOutlined className='action_icon' size={30} style={{ top: 10 }} />
+        <Text className='action_text'>首页</Text>
       </ActionBar.IconButton>
       <ActionBar.IconButton className='actionitem'>
-        <CartOutlined />
-        <Text>购物车</Text>
+        <CartOutlined className='action_icon' size={30} style={{ top: 10 }} />
+        <Text className='action_text'>购物车</Text>
       </ActionBar.IconButton>
 
-      <ActionBar.ButtonGroup className='action_right'>
-        <ActionBar.Button color='danger' className='action_right_item'>
+      <ActionBar.ButtonGroup flex={250} className='action_right'>
+        <ActionBar.Button
+          style={{ background: "#e11414" }}
+          className='right_item'
+          shape='round'
+        >
           加入购物车
         </ActionBar.Button>
-        <ActionBar.Button color='warning' className='action_right_item'>
+        <ActionBar.Button
+          style={{ background: "#f5d207" }}
+          className='right_item'
+          shape='round'
+        >
           立即购买
         </ActionBar.Button>
       </ActionBar.ButtonGroup>
@@ -140,7 +154,7 @@ export default function Index() {
       <View className='comments'></View>
       <View className='goods_details'></View>
       <View className='bottom'>
-        <ActionBarWithCustomIconButton></ActionBarWithCustomIconButton>
+        <BasicActionBar></BasicActionBar>
       </View>
     </View>
   );
