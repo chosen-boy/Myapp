@@ -12,6 +12,7 @@ export const cdnBase =
   "https://we-retail-static-1300977798.cos.ap-guangzhou.myqcloud.com/retail-mp";
 
 export default defineConfig(async (merge, { command, mode }) => {
+  console.log(command, mode);
   const baseConfig: UserConfigExport = {
     projectName: "taro_store",
     date: "2024-4-23",

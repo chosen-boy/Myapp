@@ -19,14 +19,15 @@
 /* harmony import */ var _taroify_core_cell__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @taroify/core/cell */ "./node_modules/@taroify/core/cell/index.js");
 /* harmony import */ var _taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @taroify/core/swiper */ "./node_modules/@taroify/core/swiper/index.js");
 /* harmony import */ var _taroify_core_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @taroify/core/image */ "./node_modules/@taroify/core/image/index.js");
-/* harmony import */ var D_codedir_web_taro_taro_store_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
-/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var D_codedir_web_taro_taro_store_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @taroify/commerce/action-bar */ "webpack/container/remote/@taroify/commerce/action-bar");
 /* harmony import */ var _taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _index_module_less__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./index.module.less */ "./src/pages/goods_details/index.module.less");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
@@ -49,49 +50,49 @@
 
 
 
-
+ // 导入样式文件
 
 function SwiperWithCustomIndicator() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)(0),
-    _useState2 = (0,D_codedir_web_taro_taro_store_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_12__["default"])(_useState, 2),
+    _useState2 = (0,D_codedir_web_taro_taro_store_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_13__["default"])(_useState, 2),
     value = _useState2[0],
     setValue = _useState2[1];
   var images = ["https://cdn-we-retail.ym.tencent.com/tsr/goods/nz-17a.png", "https://cdn-we-retail.ym.tencent.com/tsr/goods/nz-17a1.png", "https://cdn-we-retail.ym.tencent.com/tsr/goods/nz-17b.png", "https://cdn-we-retail.ym.tencent.com/tsr/goods/nz-17b1.png"];
   var listItems = images.map(function (item, index) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_image__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        className: "image",
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__["default"].Item, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_image__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].image,
         src: item
       })
     }, index);
   });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__["default"], {
     autoplay: 4000,
     onChange: setValue,
-    children: [listItems, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__["default"].Indicator, {
-      className: "custom-indicator",
+    children: [listItems, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_taroify_core_swiper__WEBPACK_IMPORTED_MODULE_7__["default"].Indicator, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].custom_indicator,
       children: [value + 1, "/4"]
     })]
   });
 }
 function ValueSelect() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
     children: "111"
   });
 }
 function Popupstase() {
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)(false),
-    _useState4 = (0,D_codedir_web_taro_taro_store_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_12__["default"])(_useState3, 2),
+    _useState4 = (0,D_codedir_web_taro_taro_store_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_13__["default"])(_useState3, 2),
     showPopup = _useState4[0],
     setShowPopup = _useState4[1];
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-    className: "popup",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "poptext",
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].popup,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].poptext,
       onClick: function onClick() {
         return setShowPopup(true);
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_cell__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_cell__WEBPACK_IMPORTED_MODULE_6__["default"], {
         title: "\u5DF2\u9009  \u8BF7\u9009\u62E9",
         isLink: true,
         bordered: false,
@@ -99,7 +100,7 @@ function Popupstase() {
           lineHeight: "10px"
         }
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_taroify_core_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_taroify_core_popup__WEBPACK_IMPORTED_MODULE_5__["default"], {
       open: showPopup,
       rounded: true,
       placement: "bottom",
@@ -109,11 +110,11 @@ function Popupstase() {
       onClose: function onClose() {
         return setShowPopup(false);
       },
-      className: "popup-popup",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-        className: "popup-content",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(ValueSelect, {})
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_popup__WEBPACK_IMPORTED_MODULE_5__["default"].Backdrop, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].popup_popup,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].popup_content,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(ValueSelect, {})
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_popup__WEBPACK_IMPORTED_MODULE_5__["default"].Backdrop, {
         onClick: function onClick() {
           return setShowPopup(false);
         },
@@ -121,54 +122,53 @@ function Popupstase() {
         style: {
           background: "rgba(0,0,0,0.5)"
         }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_popup__WEBPACK_IMPORTED_MODULE_5__["default"].Close, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_popup__WEBPACK_IMPORTED_MODULE_5__["default"].Close, {
         placement: "top-right"
       })]
     })]
   });
 }
 function BasicActionBar() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default()), {
-    className: ".actionbar",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().IconButton), {
-      className: "actionitem",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_icons_HomeOutlined__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        className: "action_icon",
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default()), {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].actionbar,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().IconButton), {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].actionitem,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_icons_HomeOutlined__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].action_icon,
         size: 30,
         style: {
           top: 10
         }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.Text, {
-        className: "action_text",
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.Text, {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].action_text,
         children: "\u9996\u9875"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().IconButton), {
-      className: "actionitem",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_icons_CartOutlined__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        className: "action_icon",
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().IconButton), {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].actionitem,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_icons_CartOutlined__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].action_icon,
         size: 30,
         style: {
           top: 10
         }
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.Text, {
-        className: "action_text",
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.Text, {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].action_text,
         children: "\u8D2D\u7269\u8F66"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().ButtonGroup), {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().ButtonGroup), {
       flex: 250,
-      className: "action_right",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().Button), {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].action_right,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().Button), {
         style: {
           background: "#e11414"
         },
-        className: "right_item",
-        shape: "round",
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].right_item,
         children: "\u52A0\u5165\u8D2D\u7269\u8F66"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().Button), {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)((_taroify_commerce_action_bar__WEBPACK_IMPORTED_MODULE_10___default().Button), {
         style: {
           background: "#f5d207"
         },
-        className: "right_item",
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].right_item,
         shape: "round",
         children: "\u7ACB\u5373\u8D2D\u4E70"
       })]
@@ -180,83 +180,82 @@ function Index() {
     backgroundColor: "#ffe1e1",
     color: "#ad0000"
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-    className: "page-body",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "img_swiper",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(SwiperWithCustomIndicator, {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "price_box",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-        className: "price",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-          className: "price_left",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.Text, {
-            className: "now_p",
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+    className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].page_body,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].img_swiper,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(SwiperWithCustomIndicator, {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].price_box,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].price,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+          className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].price_left,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.Text, {
+            className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].now_p,
             children: "\uFFE5298"
-          }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.Text, {
-            className: "pre_p",
+          }), " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.Text, {
+            className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].pre_p,
             children: "\uFFE5400"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-          className: "price_right",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.Text, {
-            className: "yishou",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+          className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].price_right,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.Text, {
+            className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].yishou,
             children: "\u5DF2\u552E1024"
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-        className: "redeem",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-          className: "tag_left",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].redeem,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+          className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].tag_left,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
             style: tagstyle,
             children: "\u6EE1\u51CF"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
             style: tagstyle,
             children: "\u6EE1\u51CF"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
             style: tagstyle,
             children: "\u6EE1\u51CF"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_tag__WEBPACK_IMPORTED_MODULE_2__["default"], {
             style: tagstyle,
             children: "\u6EE1\u51CF"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-          className: "tag_right",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_cell__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+          className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].tag_right,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_cell__WEBPACK_IMPORTED_MODULE_6__["default"], {
             isLink: true,
             children: "\u9886\u5238"
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-        className: "good_title",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-          className: "title",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_core_text_ellipsis__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+        className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].good_title,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+          className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].title,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_core_text_ellipsis__WEBPACK_IMPORTED_MODULE_1__["default"], {
             content: "\u6162\u6162\u6765\uFF0C\u4E0D\u8981\u6025\uFF0C\u751F\u6D3B\u7ED9\u4F60\u51FA\u4E86\u96BE\u9898"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-          className: "share",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-            className: "btn-icon",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_taroify_icons_ShareOutlined__WEBPACK_IMPORTED_MODULE_0__["default"], {})
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-            className: "btn-text",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+          className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].share,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+            className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].btn_icon,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_taroify_icons_ShareOutlined__WEBPACK_IMPORTED_MODULE_0__["default"], {})
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+            className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].btn_text,
             children: " \u5206\u4EAB"
           })]
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "size_select",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(Popupstase, {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "comments"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "goods_details"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_13__.View, {
-      className: "bottom",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(BasicActionBar, {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].size_select,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(Popupstase, {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].comments
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].goods_details
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_14__.View, {
+      className: _index_module_less__WEBPACK_IMPORTED_MODULE_11__["default"].bottom
     })]
   });
 }
@@ -912,6 +911,17 @@ var inst = Page((0,_tarojs_runtime__WEBPACK_IMPORTED_MODULE_0__.createPageConfig
 
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_tarojs_taro_loader_lib_entry_cache_js_name_pages_goods_details_index_index_tsx__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
+
+/***/ }),
+
+/***/ "./src/pages/goods_details/index.module.less":
+/*!***************************************************!*\
+  !*** ./src/pages/goods_details/index.module.less ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__) {
+
+// extracted by mini-css-extract-plugin
+/* harmony default export */ __webpack_exports__["default"] = ({"page-body":"index-module__page-body___sBVmq","img_swiper":"index-module__img_swiper___EY0Ni","price_box":"index-module__price_box___vfAFH","price":"index-module__price___IaW0O","price_left":"index-module__price_left___kk1Qs","now_p":"index-module__now_p___MENjv","pre_p":"index-module__pre_p___bRj3y","price_right":"index-module__price_right___EbSOJ","yishou":"index-module__yishou___nVCLS","redeem":"index-module__redeem___Mp8Hk","tag_left":"index-module__tag_left___uIL0k","tag_right":"index-module__tag_right___QTMk9","taroify-cell":"index-module__taroify-cell___XaGAJ","taroify-cell__value--alone":"index-module__taroify-cell__value--alone___ixcrx","taroify-cell__right-icon":"index-module__taroify-cell__right-icon___dwjBZ","good_title":"index-module__good_title___yIvTx","title":"index-module__title___SyRu7","taroify-text-ellipsis":"index-module__taroify-text-ellipsis___loT_e","share":"index-module__share___DGyOc","btn-icon":"index-module__btn-icon___TvUIw","btn-text":"index-module__btn-text___nW15k","size_select":"index-module__size_select___EsOfl","popup":"index-module__popup___sxSTS","poptext":"index-module__poptext___UbeRC","popup_content":"index-module__popup_content____W9Rk","comments":"index-module__comments___GggiX","goods_details":"index-module__goods_details___T_4tV","custom_indicator":"index-module__custom_indicator___EOMul","swiper_item":"index-module__swiper_item___vnnof","image":"index-module__image___a0LWE","bottom":"index-module__bottom___GSxWI","actionbar":"index-module__actionbar___DCqPN","actionitem":"index-module__actionitem___SU_PM","action_icon":"index-module__action_icon___inJsc","action_text":"index-module__action_text___ZfoJN","action_right":"index-module__action_right___sIk9M","right_item":"index-module__right_item____vW5Y"});
 
 /***/ })
 
