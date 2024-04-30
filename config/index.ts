@@ -13,6 +13,7 @@ export const cdnBase =
 
 export default defineConfig(async (merge, { command, mode }) => {
   console.log(command, mode);
+  // const outputRoot = `dist/${process.env.NODE_ENV}/${process.env.TARO_ENV}`;
   const baseConfig: UserConfigExport = {
     projectName: "taro_store",
     date: "2024-4-23",
@@ -24,7 +25,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       828: 1.81 / 2,
     },
     sourceRoot: "src",
-    outputRoot: "dist",
+    outputRoot: `dist/${process.env.NODE_ENV}/${process.env.TARO_ENV}`,
     plugins: [],
     defineConstants: {},
     copy: {

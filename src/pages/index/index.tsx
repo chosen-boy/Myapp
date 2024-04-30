@@ -16,7 +16,7 @@ function SearchWithEvents() {
       </Toast>
       <Search
         value={value}
-        placeholder='请输入搜索关键词'
+        placeholder="请输入搜索关键词"
         action
         onChange={(e) => setValue(e.detail.value)}
         onCancel={() => setOpen(true)}
@@ -26,14 +26,14 @@ function SearchWithEvents() {
 }
 
 function ImageSwiper() {
-  const listItems = imageitem.map((item) => (
+  const listItems = imageitem.map((item, index) => (
     <Swiper.Item>
-      <Image className='image' src={item.src} key={item.id} />
+      <Image className="image" src={item.src} key={index} />
     </Swiper.Item>
   ));
 
   return (
-    <Swiper className='basic-swiper' lazyRender autoplay={4000}>
+    <Swiper className="basic-swiper" lazyRender autoplay={4000}>
       <Swiper.Indicator />
       {listItems}
     </Swiper>
@@ -42,17 +42,17 @@ function ImageSwiper() {
 
 export default function Index() {
   return (
-    <View className='page-body'>
-      <View className='page-section'>
-        <View className='top_input'>
+    <View className="page-body">
+      <View className="page-section">
+        <View className="top_input">
           {" "}
           <SearchWithEvents></SearchWithEvents>
         </View>
 
-        <View className='swiper'>
+        <View className="swiper">
           <ImageSwiper></ImageSwiper>
         </View>
-        <View className='Tbs'>
+        <View className="Tbs">
           <Tbs></Tbs>
         </View>
       </View>

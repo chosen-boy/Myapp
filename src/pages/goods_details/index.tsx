@@ -1,7 +1,7 @@
 import { Text, View } from "@tarojs/components";
 import { Cell, Image, Popup, Swiper, Tag, TextEllipsis } from "@taroify/core";
 import { useState } from "react";
-import ActionBar from "@taroify/commerce/action-bar";
+import { ActionBar } from "@taroify/commerce";
 import { CartOutlined, HomeOutlined, ShareOutlined } from "@taroify/icons";
 import style from "./index.module.less"; // 导入样式文件
 
@@ -31,7 +31,21 @@ function SwiperWithCustomIndicator() {
 }
 
 function ValueSelect() {
-  return <View>111</View>;
+  return (
+    <View className={style.pop_content}>
+      <View className={style.pop_top}>
+        <View className={style.pop_img}>
+          <Image
+            style={{ width: "9rem", height: "9rem" }}
+            mode="scaleToFill"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+        </View>
+        <View className={style.pop_right_value}>21</View>
+      </View>
+      <View className={style.pop_form}></View>
+    </View>
+  );
 }
 
 function Popupstase() {
@@ -44,7 +58,8 @@ function Popupstase() {
           title="已选  请选择"
           isLink
           bordered={false}
-          style={{ lineHeight: "10px" }}
+          className={style.poptext}
+          style={{ lineHeight: "5px", padding: "10px" }}
         />
       </View>
       <Popup
@@ -106,7 +121,7 @@ function BasicActionBar() {
     </ActionBar>
   );
 }
-
+//
 export default function Index() {
   const tagstyle = {
     backgroundColor: "#ffe1e1",
@@ -155,8 +170,9 @@ export default function Index() {
       </View>
       <View className={style.comments}></View>
       <View className={style.goods_details}></View>
+
       <View className={style.bottom}>
-        {/*<BasicActionBar></BasicActionBar>*/}
+        <BasicActionBar></BasicActionBar>
       </View>
     </View>
   );
