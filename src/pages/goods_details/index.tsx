@@ -1,9 +1,20 @@
 import { Text, View } from "@tarojs/components";
-import { Cell, Image, Popup, Swiper, Tag, TextEllipsis } from "@taroify/core";
-import { useState } from "react";
+import {
+  Cell,
+  Image,
+  Popup,
+  Swiper,
+  Tag,
+  TextEllipsis,
+  Form,
+  Stepper,
+} from "@taroify/core";
 import { ActionBar } from "@taroify/commerce";
+import { CSSProperties, useState } from "react";
+
 import { CartOutlined, HomeOutlined, ShareOutlined } from "@taroify/icons";
-import style from "./index.module.less"; // 导入样式文件
+
+import style from "./index.module.less";
 
 function SwiperWithCustomIndicator() {
   const [value, setValue] = useState(0);
@@ -31,19 +42,97 @@ function SwiperWithCustomIndicator() {
 }
 
 function ValueSelect() {
+  const tagstyle: CSSProperties = {
+    backgroundColor: "#cbc1c1",
+    color: "#000000",
+    height: "50%",
+    width: "80px",
+    margin: "10px",
+
+    alignItems: "center",
+    justifyContent: "center",
+  };
   return (
     <View className={style.pop_content}>
       <View className={style.pop_top}>
         <View className={style.pop_img}>
           <Image
-            style={{ width: "9rem", height: "9rem" }}
+            style={{ width: "8rem", height: "8rem", margin: "0 0 0 20px" }}
             mode="scaleToFill"
             src="https://img.yzcdn.cn/vant/cat.jpeg"
           />
         </View>
-        <View className={style.pop_right_value}>21</View>
+        <View className={style.pop_right_value}>
+          <View className={style.poptitle}>
+            这是一段最多显示两行的文字，多余的内容会被省略
+          </View>
+          <View className={style.popprice}>￥298</View>
+          <View className={style.popselect}>选择</View>
+        </View>
       </View>
-      <View className={style.pop_form}></View>
+      <View className={style.pop_form}>
+        <View className={style.popcolor}>
+          <View className={style.goodstag}>颜色</View>
+          <View className={style.tagitem}>
+            <Tag color="default" size="medium" style={tagstyle}>
+              米色荷叶边
+            </Tag>
+          </View>
+        </View>
+        <View className={style.popsize}>
+          <View className={style.goodstag}>尺码</View>
+          <View className={style.tagitem}>
+            <Tag color="default" size="medium" style={tagstyle}>
+              S
+            </Tag>
+            <Tag color="default" size="medium" style={tagstyle}>
+              M
+            </Tag>
+            <Tag color="default" size="medium" style={tagstyle}>
+              L
+            </Tag>
+          </View>
+        </View>
+        <View className={style.popnum}>
+          <View className={style.popnum_limit}>
+            <Text
+              style={{
+                height: "50%",
+                width: "50%",
+                padding: "15px 5px ",
+
+                fontSize: "medium",
+              }}
+            >
+              购买数量
+            </Text>
+            <Text
+              style={{
+                height: "50%",
+                width: "50%",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "smaller",
+
+                color: "#9a9595",
+              }}
+            >
+              (限购5件)
+            </Text>
+          </View>
+          <View className={style.popnumvalue}>
+            <Form.Item name="stepper" className={style.stepper}>
+              <Form.Label style={{ width: "30%", fontSize: "small" }}>
+                步进器
+              </Form.Label>
+              <Form.Control style={{ width: "70%" }}>
+                <Stepper style={{ width: "100%", fontSize: "small" }} />
+              </Form.Control>
+            </Form.Item>
+          </View>
+        </View>
+        <View className={style.popbottom}></View>
+      </View>
     </View>
   );
 }

@@ -180,21 +180,85 @@ page {
           width: 100%;
           height: 35%;
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
+          gap: 20px;
           .pop_img {
             width: 35%;
             height: 100%;
-            background: yellow;
           }
           .pop_right_value {
-            width: 65%;
+            width: 55%;
             height: 100%;
-            background: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .poptitle {
+              width: 100%;
+              height: 50%;
+            }
+            .popprice {
+              height: 30%;
+
+              color: red;
+              font-size: 50px;
+              font-weight: bolder;
+            }
+            .popselect {
+              height: 20%;
+            }
           }
         }
         .pop_form {
           width: 100%;
           height: 65%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 10px;
+          .popcolor,
+          .popsize,
+          .popnum,
+          .popbottom {
+            width: 95%;
+            height: 25%;
+
+            display: flex;
+            flex-direction: column;
+            .goodstag {
+              width: 100%;
+              height: 30%;
+              padding-left: 30px;
+            }
+            .tagitem {
+              width: 100%;
+              height: 70%;
+            }
+          }
+          .popcolor,
+          .popsize {
+            border-bottom: 1px solid #a49a9a;
+          }
+          .popnum {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .popnum_limit {
+              width: 35%;
+              height: 50%;
+            }
+            .popnumvalue {
+              width: 35%;
+
+              height: 50%;
+              .stepper {
+                width: 100%;
+                height: 100%;
+                background: yellow;
+              }
+            }
+          }
         }
       }
     }
