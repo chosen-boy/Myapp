@@ -247,16 +247,42 @@ page {
             .popnum_limit {
               width: 35%;
               height: 50%;
+              line-height: 60px;
             }
             .popnumvalue {
-              width: 35%;
+              width: 45%;
 
               height: 50%;
               .stepper {
                 width: 100%;
                 height: 100%;
-                background: yellow;
               }
+            }
+          }
+          .popupbottom {
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            flex-direction: row;
+            .popbutton {
+              width: 50%;
+              height: 100%;
+              text-align: center;
+              line-height: 80px;
+              font-size: 25px;
+            }
+            .popbutton:nth-child(1) {
+              border-top-left-radius: 50px;
+              background: rgba(239, 122, 111, 0.89); /* 设置左上圆角 */
+              color: red;
+              border-bottom-left-radius: 50px; /* 设置左下圆角 */
+            }
+            .popbutton:nth-child(2) {
+              border-top-right-radius: 50px;
+              border-bottom-right-radius: 50px;
+              background: #e11414; /* 设置左上圆角 */
+              color: #ffffff;
             }
           }
         }

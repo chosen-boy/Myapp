@@ -1,4 +1,4 @@
-import { Text, View } from "@tarojs/components";
+import { Text, View, Button } from "@tarojs/components";
 import {
   Cell,
   Image,
@@ -9,7 +9,7 @@ import {
   Form,
   Stepper,
 } from "@taroify/core";
-import { ActionBar } from "@taroify/commerce";
+import ActionBar from "@taroify/commerce/action-bar";
 import { CSSProperties, useState } from "react";
 
 import { CartOutlined, HomeOutlined, ShareOutlined } from "@taroify/icons";
@@ -52,6 +52,7 @@ function ValueSelect() {
     alignItems: "center",
     justifyContent: "center",
   };
+
   return (
     <View className={style.pop_content}>
       <View className={style.pop_top}>
@@ -122,24 +123,22 @@ function ValueSelect() {
           </View>
           <View className={style.popnumvalue}>
             <Form.Item name="stepper" className={style.stepper}>
-              <Form.Label style={{ width: "30%", fontSize: "small" }}>
-                步进器
-              </Form.Label>
-              <Form.Control style={{ width: "70%" }}>
-                <Stepper style={{ width: "100%", fontSize: "small" }} />
+              <Form.Control>
+                <Stepper />
               </Form.Control>
             </Form.Item>
           </View>
         </View>
-        <View className={style.popbottom}></View>
+        <View className={style.popupbottom}>
+          <Button className={style.popbutton}>加入购物车</Button>
+          <Button className={style.popbutton}>立即购买</Button>
+        </View>
       </View>
     </View>
   );
 }
 
-function Popupstase() {
-  const [showPopup, setShowPopup] = useState(false);
-
+function Popupstase({ showPopup, setShowPopup }) {
   return (
     <View className={style.popup}>
       <View className={style.poptext} onClick={() => setShowPopup(true)}>
@@ -173,7 +172,12 @@ function Popupstase() {
   );
 }
 
-function BasicActionBar() {
+function BasicActionBar({ showPopup, setShowPopup }) {
+  const toggle = () => {
+    console.log(showPopup);
+    setShowPopup(true);
+    console.log(showPopup);
+  };
   return (
     <ActionBar className={style.actionbar}>
       <ActionBar.IconButton className={style.actionitem}>
@@ -196,6 +200,9 @@ function BasicActionBar() {
         <ActionBar.Button
           style={{ background: "#e11414" }}
           className={style.right_item}
+          onClick={() => {
+            toggle();
+          }}
         >
           加入购物车
         </ActionBar.Button>
@@ -203,6 +210,7 @@ function BasicActionBar() {
           style={{ background: "#f5d207" }}
           className={style.right_item}
           shape="round"
+          onClick={() => toggle()}
         >
           立即购买
         </ActionBar.Button>
@@ -212,6 +220,7 @@ function BasicActionBar() {
 }
 //
 export default function Index() {
+  const [showPopup, setShowPopup] = useState(false);
   const tagstyle = {
     backgroundColor: "#ffe1e1",
     color: "#ad0000",
@@ -255,13 +264,16 @@ export default function Index() {
         </View>
       </View>
       <View className={style.size_select}>
-        <Popupstase></Popupstase>
+        <Popupstase
+          showPopup={showPopup}
+          setShowPopup={setShowPopup}
+        ></Popupstase>
       </View>
       <View className={style.comments}></View>
       <View className={style.goods_details}></View>
 
       <View className={style.bottom}>
-        <BasicActionBar></BasicActionBar>
+        <BasicActionBar showPopup={showPopup} setShowPopup={setShowPopup} />
       </View>
     </View>
   );

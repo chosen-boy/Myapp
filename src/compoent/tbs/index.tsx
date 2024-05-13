@@ -4,12 +4,14 @@ import { Text, View } from "@tarojs/components";
 import { CartOutlined } from "@taroify/icons";
 import Taro from "@tarojs/taro";
 import "./index.less";
+// import { goodsList } from "../../model/goods";
 
 function navto() {
   Taro.navigateTo({ url: "/pages/goods_details/index" });
 }
 
 export default function Index() {
+  // console.log(goodsList);
   return (
     <Tabs animated swipeable>
       <Tabs.TabPane title="精选推荐">
