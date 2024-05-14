@@ -1,17 +1,32 @@
 // import { useState } from 'react';
+
 import { Grid, Image, Tabs, Tag } from "@taroify/core";
 import { Text, View } from "@tarojs/components";
 import { CartOutlined } from "@taroify/icons";
+import { fetchGoodsList } from "@/services/good/fetchGoods";
 import Taro from "@tarojs/taro";
 import "./index.less";
-// import { goodsList } from "../../model/goods";
 
 function navto() {
   Taro.navigateTo({ url: "/pages/goods_details/index" });
 }
 
 export default function Index() {
-  // console.log(goodsList);
+  let isMounted = true;
+  fetchGoodsList()
+    .then((response) => {
+      if (isMounted) {
+        // 处理返回的商品列表数据
+        console.log(response);
+      }
+    })
+    .catch((error) => {
+      if (isMounted) {
+        // 处理请求错误
+        console.error(error);
+      }
+    });
+
   return (
     <Tabs animated swipeable>
       <Tabs.TabPane title="精选推荐">

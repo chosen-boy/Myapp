@@ -24,6 +24,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       375: 2,
       828: 1.81 / 2,
     },
+
     sourceRoot: "src",
     outputRoot: `dist/${process.env.NODE_ENV}/${process.env.TARO_ENV}`,
     plugins: [],
@@ -63,6 +64,20 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
       webpackChain(chain) {
         chain.resolve.plugin("tsconfig-paths").use(TsconfigPathsPlugin);
+        chain.merge({
+          module: {
+            rules: [
+              // 其他规则...
+
+              {
+                test: /\.node$/,
+                use: "node-loader",
+              },
+
+              // 其他规则...
+            ],
+          },
+        });
       },
     },
     h5: {
@@ -92,6 +107,14 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
       webpackChain(chain) {
         chain.resolve.plugin("tsconfig-paths").use(TsconfigPathsPlugin);
+        chain.module
+          .rule("tsx")
+          .test(/\.tsx?$/)
+          .use("ts-loader")
+          .loader("ts-loader")
+          .options({
+            transpileOnly: true,
+          });
       },
     },
     rn: {
@@ -103,6 +126,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
     },
   };
+
   if (process.env.NODE_ENV === "development") {
     // 本地开发构建配置（不混淆压缩）
     return merge({}, baseConfig, devConfig);

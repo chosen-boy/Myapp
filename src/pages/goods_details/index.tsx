@@ -9,7 +9,8 @@ import {
   Form,
   Stepper,
 } from "@taroify/core";
-import ActionBar from "@taroify/commerce/action-bar";
+// import ActionBar from "@taroify/commerce/action-bar";
+import { ActionBar } from "@taroify/commerce";
 import { CSSProperties, useState } from "react";
 
 import { CartOutlined, HomeOutlined, ShareOutlined } from "@taroify/icons";
