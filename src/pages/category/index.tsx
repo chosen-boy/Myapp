@@ -2,7 +2,9 @@ import { Text, View } from "@tarojs/components";
 // import { useState } from 'react';
 
 import { CartOutlined, ChatOutlined, ShopOutlined } from "@taroify/icons";
-import { ActionBar } from "@taroify/commerce";
+
+// import ActionBar from "@taroify/commerce/action-bar";
+import ActionBar from "@taroify/commerce/action-bar";
 import "./index.less";
 
 function BasicActionBar1() {

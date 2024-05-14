@@ -1,4 +1,4 @@
-import { config, cdnBase } from "../../../config";
+import { config } from "../../../config";
 
 /** 获取首页数据 */
 function mockFetchHome() {
@@ -37,7 +37,7 @@ function mockFetchHome() {
           key: 6,
         },
       ],
-      activityImg: `${cdnBase}/activity/banner.png`,
+      activityImg: `/activity/banner.png`,
     };
   });
 }

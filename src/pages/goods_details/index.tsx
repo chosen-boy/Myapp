@@ -9,12 +9,15 @@ import {
   Form,
   Stepper,
 } from "@taroify/core";
-// import ActionBar from "@taroify/commerce/action-bar";
-import { ActionBar } from "@taroify/commerce";
-import { CSSProperties, useState } from "react";
+
+import { fetchGood } from "@/services/good/fetchGood";
+// import { ActionBar } from "@taroify/commerce";
+import { CSSProperties, useEffect, useState } from "react";
 
 import { CartOutlined, HomeOutlined, ShareOutlined } from "@taroify/icons";
-
+import { useRouter } from "@tarojs/taro";
+import ActionBar from "@taroify/commerce/action-bar";
+// import { ActionBar } from "@taroify/commerce";
 import style from "./index.module.less";
 
 function SwiperWithCustomIndicator() {
@@ -222,10 +225,40 @@ function BasicActionBar({ showPopup, setShowPopup }) {
 //
 export default function Index() {
   const [showPopup, setShowPopup] = useState(false);
+  const [gooddetail, setgoods] = useState([]);
+
   const tagstyle = {
     backgroundColor: "#ffe1e1",
     color: "#ad0000",
   };
+  const router = useRouter();
+  const productId = router.params.id;
+  console.log("id:", productId);
+  useEffect(() => {
+    let isMounted = true;
+    const fetchData = async () => {
+      try {
+        const res = await fetchGood(Number(productId));
+        if (isMounted) {
+          // 处理返回的商品列表数据
+          console.log("res:", res);
+          setgoods(res);
+        }
+      } catch (error) {
+        if (isMounted) {
+          // 处理请求错误
+          console.error(error);
+        }
+      }
+    };
+
+    fetchData();
+
+    return () => {
+      isMounted = false; // 组件卸载时更新isMounted的值
+    };
+  }, []);
+  console.log("details:", gooddetail);
   return (
     <View className={style.page_body}>
       <View className={style.img_swiper}>

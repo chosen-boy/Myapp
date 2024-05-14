@@ -8,9 +8,6 @@ export const config = {
   useMock: true,
 };
 
-export const cdnBase =
-  "https://we-retail-static-1300977798.cos.ap-guangzhou.myqcloud.com/retail-mp";
-
 export default defineConfig(async (merge, { command, mode }) => {
   console.log(command, mode);
   // const outputRoot = `dist/${process.env.NODE_ENV}/${process.env.TARO_ENV}`;

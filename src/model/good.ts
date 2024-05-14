@@ -1,9 +1,3 @@
-import { cdnBase } from "../../config/index";
-
-const imgPrefix = cdnBase;
-
-const defaultDesc = [`${imgPrefix}/goods/details-1.png`];
-
 const allGoods = [
   {
     saasId: "88888888",
@@ -1911,7 +1905,7 @@ export function genGood(id, available = 1) {
     ...item,
     spuId: `${id}`,
     available: available,
-    desc: item?.desc || defaultDesc,
+    desc: item?.desc,
     images: item?.images || [item?.primaryImage],
   };
 }
